@@ -40,7 +40,7 @@ export default function WeatherApp() {
         />
         <button onClick={handleSearch}>Search</button>
       </div>
-      {loading && <p>Loading data…</p>}
+      {loading && <p>Loading data...</p>}
 
       {weather && !error && (
         <div className="weather-cards">
