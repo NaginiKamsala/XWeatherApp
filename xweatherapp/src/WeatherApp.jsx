@@ -19,6 +19,7 @@ export default function WeatherApp() {
       setWeather(response.data);
     } catch (error) {
       setError(true);
+      alert("Failed to fetch weather data");
     }
     setLoading(false);
   };
@@ -40,7 +41,7 @@ export default function WeatherApp() {
         <button onClick={handleSearch}>Search</button>
       </div>
       {loading && <p>Loading data…</p>}
-      {error && <p>Failed to fetch weather data</p>}
+
       {weather && !error && (
         <div className="weather-cards">
           <div className="weather-card">
